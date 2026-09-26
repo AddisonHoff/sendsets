@@ -7,7 +7,7 @@ This repository is the public, agent-facing home of Sendsets:
 | What | Where |
 |---|---|
 | Remote MCP server | `https://api.sendsetsapi.com/v1/mcp` (streamable HTTP, OAuth 2.1 or API key) |
-| Agent skills (`SKILL.md`) | [`skills/sendsets`](skills/sendsets/SKILL.md), [`skills/sendsets-cli`](skills/sendsets-cli/SKILL.md) |
+| Agent skills (`SKILL.md`) | [`skills/send-cold-email`](skills/send-cold-email/SKILL.md), [`skills/sendsets`](skills/sendsets/SKILL.md), [`skills/sendsets-cli`](skills/sendsets-cli/SKILL.md) |
 | Claude Code plugin marketplace | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) |
 | Gemini CLI extension | [`gemini-extension.json`](gemini-extension.json) |
 | MCP Registry manifest | [`server.json`](server.json) (`io.github.AddisonHoff/sendsets`) |
@@ -97,7 +97,7 @@ gemini extensions install https://github.com/AddisonHoff/sendsets
 
 ## Install the skills
 
-The `sendsets` skill teaches an agent to read your product, propose five outbound workflows that use the product itself, then build and run the one you pick. The `sendsets-cli` skill is the full reference for driving Sendsets from a terminal.
+`send-cold-email` is the direct path: take a lead list and send a cold email sequence with follow-ups, from mailbox check to launch and replies. The `sendsets` skill teaches an agent to read your product, propose five outbound workflows that use the product itself, then build and run the one you pick. The `sendsets-cli` skill is the full reference for driving Sendsets from a terminal.
 
 ```bash
 npx skills add AddisonHoff/sendsets

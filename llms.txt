@@ -16,6 +16,7 @@
 
 ## Skills
 
+- [send-cold-email](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/skills/send-cold-email/SKILL.md): send cold email and run outbound campaigns from an agent
 - [sendsets](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/skills/sendsets/SKILL.md): turn a product into outbound campaigns and run them
 - [sendsets-cli](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/skills/sendsets-cli/SKILL.md): drive Sendsets from a terminal
 - [claude.md](https://sendsetsapi.com/claude.md): one-link starting point for coding agents
