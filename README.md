@@ -131,7 +131,7 @@ Base URL `https://api.sendsetsapi.com/v1`. Errors carry a stable `code` and `req
 
 - The MCP server at `https://api.sendsetsapi.com/v1/mcp`, over HTTPS, authenticated with your own OAuth sign-in or API key. Every tool call reads or changes data in your Sendsets workspace; send tools deliver real email from your connected mailboxes.
 - The skills may tell the agent to install the `sendsets` CLI from `https://sendsetsapi.com/cli.sh`, checked against `https://sendsetsapi.com/cli.sh.sha256` before it runs. The CLI talks only to `https://api.sendsetsapi.com`.
-- Nothing else. The plugin has no hooks, no local server and no scripts that run on install, and it never reads credentials from your environment.
+- Nothing else. The plugin has no hooks, no local server and no scripts that run on install, and its MCP configuration never reads credentials from your environment.
 
 ## Safety defaults
 
