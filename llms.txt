@@ -1,0 +1,21 @@
+# Sendsets
+
+> The cold email API for AI agents. Agents connect sending mailboxes, warm them up, build and launch outbound campaigns, add leads, and read and answer replies through an MCP server, a CLI, or a REST API.
+
+- Remote MCP server: https://api.sendsetsapi.com/v1/mcp (streamable HTTP, OAuth 2.1 or API key)
+- Website: https://sendsetsapi.com
+- Sign up: https://app.sendsetsapi.com/auth/register (free for up to 10 mailboxes)
+
+## Docs
+
+- [Agent quickstart](https://docs.sendsetsapi.com/api/quickstart/): set Sendsets up from an agent end to end
+- [MCP server](https://docs.sendsetsapi.com/api/mcp/): endpoint, auth, send-tool approval policy
+- [CLI](https://docs.sendsetsapi.com/api/cli/): the `sendsets` command line
+- [API reference](https://docs.sendsetsapi.com/api/): REST endpoints, errors, permissions
+- [OpenAPI spec](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/openapi.json)
+
+## Skills
+
+- [sendsets](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/skills/sendsets/SKILL.md): turn a product into outbound campaigns and run them
+- [sendsets-cli](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/skills/sendsets-cli/SKILL.md): drive Sendsets from a terminal
+- [claude.md](https://sendsetsapi.com/claude.md): one-link starting point for coding agents

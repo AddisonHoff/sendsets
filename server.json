@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.AddisonHoff/sendsets",
+  "title": "Sendsets",
+  "description": "Cold email API for AI agents: connect mailboxes, warm up, run campaigns and handle replies.",
+  "version": "1.0.0",
+  "websiteUrl": "https://sendsetsapi.com",
+  "repository": {
+    "url": "https://github.com/AddisonHoff/sendsets",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://sendsetsapi.com/web-app-manifest-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.sendsetsapi.com/v1/mcp"
+    }
+  ]
+}
