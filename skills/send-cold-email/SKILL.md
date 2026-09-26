@@ -10,7 +10,7 @@ Sendsets is a cold email API for agents. Work through the Sendsets MCP tools whe
 Not connected yet? Pick one:
 
 - MCP: `claude mcp add --transport http sendsets https://api.sendsetsapi.com/v1/mcp` (OAuth sign-in in the browser; other clients use the same URL)
-- CLI: `curl -fsSL https://sendsetsapi.com/cli.sh | sh`, then `sendsets login` (it prints a code and URL for the user to approve) and `sendsets doctor --json`
+- CLI: download https://sendsetsapi.com/cli.sh and https://sendsetsapi.com/cli.sh.sha256, check the SHA-256 matches (`shasum -a 256 -c cli.sh.sha256`), run `sh cli.sh`, then `sendsets login` (it prints a code and URL for the user to approve) and `sendsets doctor --json`
 
 A new workspace is free for up to 10 mailboxes: https://app.sendsetsapi.com/auth/register
 

@@ -11,12 +11,10 @@ command is bounded by the scopes the sign-in approved.
 
 If the binary is not on PATH, install it without a toolchain or root:
 
-```bash
-curl -fsSL https://sendsets.vercel.app/cli.sh | sh     # macOS, Linux
-irm https://sendsets.vercel.app/cli.ps1 | iex          # Windows
-```
-
-Add `-s -- --dir <path>` to place it somewhere specific. It is also inside the
+On macOS and Linux, download https://sendsetsapi.com/cli.sh and
+https://sendsetsapi.com/cli.sh.sha256 into one directory, check the installer
+with `shasum -a 256 -c cli.sh.sha256`, then run `sh cli.sh`. On Windows, run `irm https://sendsetsapi.com/cli.ps1 | iex` in PowerShell.
+Pass `--dir <path>` to `sh cli.sh` to place it somewhere specific. It is also inside the
 backend image on a self-hosted instance (`docker compose -p sendsets exec
 backend sendsets ...`).
 
