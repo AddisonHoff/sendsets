@@ -13,7 +13,8 @@ If the binary is not on PATH, install it without a toolchain or root:
 
 On macOS and Linux, download https://sendsetsapi.com/cli.sh and
 https://sendsetsapi.com/cli.sh.sha256 into one directory, check the installer
-with `shasum -a 256 -c cli.sh.sha256`, then run `sh cli.sh`. On Windows, run `irm https://sendsetsapi.com/cli.ps1 | iex` in PowerShell.
+with `shasum -a 256 -c cli.sh.sha256`, then run `sh cli.sh`. On Windows, download https://sendsetsapi.com/cli.ps1 and run it with
+`powershell -ExecutionPolicy Bypass -File cli.ps1`.
 Pass `--dir <path>` to `sh cli.sh` to place it somewhere specific. It is also inside the
 backend image on a self-hosted instance (`docker compose -p sendsets exec
 backend sendsets ...`).

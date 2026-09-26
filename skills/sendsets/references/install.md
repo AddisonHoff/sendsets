@@ -1,6 +1,6 @@
 # CLI installation
 
-Use `scripts/install.sh` on macOS or Linux. It downloads the published CLI installer and its checksum, checks it, then runs it. On Windows use `irm https://sendsetsapi.com/cli.ps1 | iex` in PowerShell. The CLI installer verifies the release archive against its published checksums before installing.
+On macOS or Linux, download https://sendsetsapi.com/cli.sh and https://sendsetsapi.com/cli.sh.sha256 into one directory, check the installer with `shasum -a 256 -c cli.sh.sha256` (or `sha256sum -c cli.sh.sha256`), and run `sh cli.sh` only if the check passes. On Windows, download https://sendsetsapi.com/cli.ps1 and run it with `powershell -ExecutionPolicy Bypass -File cli.ps1`. The CLI installer verifies the release archive against its published checksums before installing.
 
 Confirm with `sendsets version`. The Unix binary defaults to `~/.local/bin/sendsets`; use that path if the current shell has not loaded the new PATH. A hosted workspace uses the default host. For self-hosted use `SENDSETS_HOST` or `--host`.
 
