@@ -8,7 +8,7 @@ Sendsets is a hosted (remote) MCP server. There is nothing to build or run local
 
 ## Steps
 
-1. Ask the user for a Sendsets API key. They create one in the dashboard at https://app.sendsetsapi.com under Settings > API keys (sign up free at https://app.sendsetsapi.com/auth/register). Keys start with `ssk_`. Never invent one.
+1. Ask the user for a Sendsets API key. They create one at https://app.sendsetsapi.com/app/api-keys (sign up free at https://app.sendsetsapi.com/auth/register). Keys start with `ssk_`. Never invent one.
 2. Add this entry to the MCP settings file (for Cline, `cline_mcp_settings.json`), replacing the key:
 
 ```json
