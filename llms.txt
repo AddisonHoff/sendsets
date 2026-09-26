@@ -12,7 +12,7 @@
 - [MCP server](https://docs.sendsetsapi.com/api/mcp/): endpoint, auth, send-tool approval policy
 - [CLI](https://docs.sendsetsapi.com/api/cli/): the `sendsets` command line
 - [API reference](https://docs.sendsetsapi.com/api/): REST endpoints, errors, permissions
-- [OpenAPI spec](https://raw.githubusercontent.com/AddisonHoff/sendsets/main/openapi.json)
+- [OpenAPI spec](https://gist.githubusercontent.com/AddisonHoff/abfb01a48dc15edef07cb188cbb70d04/raw/openapi.json)
 
 ## Skills
 

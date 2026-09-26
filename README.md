@@ -13,7 +13,7 @@ This repository is the public, agent-facing home of Sendsets:
 | Agent Plugins manifest | [`plugin.json`](plugin.json), [`mcp.json`](mcp.json) ([agent-plugins.org](https://agent-plugins.org)) |
 | Gemini CLI extension | [`gemini-extension.json`](gemini-extension.json) |
 | MCP Registry manifest | [`server.json`](server.json) (`io.github.AddisonHoff/sendsets`) |
-| OpenAPI 3.1 spec | [`openapi.json`](openapi.json) |
+| OpenAPI 3.1 spec | [openapi.json](https://gist.githubusercontent.com/AddisonHoff/abfb01a48dc15edef07cb188cbb70d04/raw/openapi.json) |
 | Docs | [docs.sendsetsapi.com](https://docs.sendsetsapi.com/api/) |
 
 Sign up at [app.sendsetsapi.com](https://app.sendsetsapi.com/auth/register). Free for up to 10 mailboxes.
@@ -125,7 +125,13 @@ Windows: `irm https://sendsetsapi.com/cli.ps1 | iex`. The CLI signs in as a pers
 
 ## REST API
 
-Base URL `https://api.sendsetsapi.com/v1`. Errors carry a stable `code` and `request_id`, lists use `data` plus cursor `pagination`, and side-effectful writes accept an `Idempotency-Key`. Spec: [`openapi.json`](openapi.json). Reference: [docs.sendsetsapi.com/api](https://docs.sendsetsapi.com/api/).
+Base URL `https://api.sendsetsapi.com/v1`. Errors carry a stable `code` and `request_id`, lists use `data` plus cursor `pagination`, and side-effectful writes accept an `Idempotency-Key`. Spec: [openapi.json](https://gist.githubusercontent.com/AddisonHoff/abfb01a48dc15edef07cb188cbb70d04/raw/openapi.json). Reference: [docs.sendsetsapi.com/api](https://docs.sendsetsapi.com/api/).
+
+## What this plugin connects to
+
+- The MCP server at `https://api.sendsetsapi.com/v1/mcp`, over HTTPS, authenticated with your own OAuth sign-in or API key. Every tool call reads or changes data in your Sendsets workspace; send tools deliver real email from your connected mailboxes.
+- The skills may tell the agent to install the `sendsets` CLI from `https://sendsetsapi.com/cli.sh`, checked against `https://sendsetsapi.com/cli.sh.sha256` before it runs. The CLI talks only to `https://api.sendsetsapi.com`.
+- Nothing else. The plugin has no hooks, no local server and no scripts that run on install, and it never reads credentials from your environment.
 
 ## Safety defaults
 
