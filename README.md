@@ -9,6 +9,8 @@ This repository is the public, agent-facing home of Sendsets:
 | Remote MCP server | `https://api.sendsetsapi.com/v1/mcp` (streamable HTTP, OAuth 2.1 or API key) |
 | Agent skills (`SKILL.md`) | [`skills/send-cold-email`](skills/send-cold-email/SKILL.md), [`skills/sendsets`](skills/sendsets/SKILL.md), [`skills/sendsets-cli`](skills/sendsets-cli/SKILL.md) |
 | Claude Code plugin marketplace | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) |
+| Codex plugin marketplace | [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json), [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json) |
+| Agent Plugins manifest | [`plugin.json`](plugin.json), [`mcp.json`](mcp.json) ([agent-plugins.org](https://agent-plugins.org)) |
 | Gemini CLI extension | [`gemini-extension.json`](gemini-extension.json) |
 | MCP Registry manifest | [`server.json`](server.json) (`io.github.AddisonHoff/sendsets`) |
 | OpenAPI 3.1 spec | [`openapi.json`](openapi.json) |
@@ -49,6 +51,12 @@ Or install the plugin, which adds the MCP server and the skills together:
 **Claude (claude.ai and Claude Desktop)**: Settings > Connectors > Add custom connector, URL `https://api.sendsetsapi.com/v1/mcp`.
 
 **Codex**
+
+```bash
+codex plugin marketplace add AddisonHoff/sendsets     # MCP server + skills as a plugin
+```
+
+or just the MCP server:
 
 ```bash
 codex mcp add sendsets --url https://api.sendsetsapi.com/v1/mcp
