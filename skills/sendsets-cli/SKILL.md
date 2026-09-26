@@ -29,7 +29,7 @@ From nothing to a launched campaign, every step is a command and every failure
 prints a `fix:` line:
 
 ```bash
-sendsets login                      # or SENDSETS_TOKEN=ssk_... in the environment
+sendsets login --hostname sendsetsapi.com   # or SENDSETS_TOKEN=ssk_... plus SENDSETS_HOST=sendsetsapi.com
 sendsets whoami                     # workspace, credential, scopes, agent policy
 sendsets doctor                     # what is set up, what is not, a fix per gap; exit 1 when not ready
 sendsets connection create --name app --base-url https://app.example.com/sendsets   # secret printed once
