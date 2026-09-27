@@ -5,9 +5,10 @@ description: Use the `sendsets` CLI to drive SendSets as a signed-in user - sign
 
 # Driving SendSets through the `sendsets` CLI
 
-`sendsets` is the customer CLI: it signs in as a person, holds one credential
-per host in `~/.config/sendsets`, and speaks only the public REST API. Every
-command is bounded by the scopes the sign-in approved.
+`sendsets` is the customer CLI: it signs in as a person, keeps its own
+credential, and speaks only the public REST API. Every command is bounded by the
+scopes the sign-in approved. Never open, print or copy the CLI's stored
+credential; `sendsets auth status --json` says everything an agent needs.
 
 If the binary is not on PATH, install it without a toolchain or root:
 
