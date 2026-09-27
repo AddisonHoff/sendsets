@@ -4,7 +4,7 @@ Sendsets is a cold email API for AI agents. Use it when a task involves sending 
 
 - MCP server: `https://api.sendsetsapi.com/v1/mcp` (streamable HTTP; OAuth 2.1 with dynamic client registration, or `Authorization: Bearer ssk_...`)
 - Skill: read `skills/sendsets/SKILL.md` first; its references sit beside it and are read only when a step needs them
-- CLI: `curl -fsSL https://sendsetsapi.com/cli.sh | sh`, then `sendsets login` and `sendsets doctor --json`
+- CLI: `brew install addisonhoff/tap/sendsets` (Scoop on Windows, see README), then `sendsets login --hostname sendsetsapi.com` and `sendsets doctor --json`
 - REST API: `https://api.sendsetsapi.com/v1`, spec at https://gist.githubusercontent.com/AddisonHoff/abfb01a48dc15edef07cb188cbb70d04/raw/openapi.json
 - Docs: https://docs.sendsetsapi.com/api/
 

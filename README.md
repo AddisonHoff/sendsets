@@ -116,12 +116,12 @@ Or copy [`skills/sendsets`](skills/sendsets) into `~/.claude/skills/` (Claude Co
 ## CLI
 
 ```bash
-curl -fsSL https://sendsetsapi.com/cli.sh | sh        # macOS and Linux, checksum verified
-sendsets login
+brew install addisonhoff/tap/sendsets                 # macOS, Linux
+sendsets login --hostname sendsetsapi.com
 sendsets doctor --json
 ```
 
-Windows: `irm https://sendsetsapi.com/cli.ps1 | iex`. The CLI signs in as a person and speaks only the public REST API; every command takes `--json`.
+Windows: `scoop bucket add sendsets https://github.com/AddisonHoff/homebrew-tap`, then `scoop install sendsets`. Archives and `checksums.txt` for every platform are on [sendsets-releases](https://github.com/AddisonHoff/sendsets-releases/releases/latest). The CLI signs in as a person and speaks only the public REST API; every command takes `--json`.
 
 ## REST API
 
@@ -130,7 +130,7 @@ Base URL `https://api.sendsetsapi.com/v1`. Errors carry a stable `code` and `req
 ## What this plugin connects to
 
 - The MCP server at `https://api.sendsetsapi.com/v1/mcp`, over HTTPS, authenticated with your own OAuth sign-in or API key. Every tool call reads or changes data in your Sendsets workspace; send tools deliver real email from your connected mailboxes.
-- The skills may tell the agent to install the `sendsets` CLI from `https://sendsetsapi.com/cli.sh`, checked against `https://sendsetsapi.com/cli.sh.sha256` before it runs. The CLI talks only to `https://api.sendsetsapi.com`.
+- The skills may tell the agent to install the `sendsets` CLI with Homebrew or Scoop from [AddisonHoff/homebrew-tap](https://github.com/AddisonHoff/homebrew-tap), or from a release archive checked against its published `checksums.txt`. The CLI talks only to `https://api.sendsetsapi.com`.
 - Nothing else. The plugin has no hooks, no local server and no scripts that run on install, and its MCP configuration never reads credentials from your environment.
 
 ## Safety defaults
